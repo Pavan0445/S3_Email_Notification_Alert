@@ -35,7 +35,7 @@ variable email2{
 
 variable filename{
     type = string
-    default = "./lambda/lambda.zip"
+    default = "${path.module}/lambda/lambda.zip"
 }
 
 variable function_name{

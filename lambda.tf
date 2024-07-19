@@ -12,7 +12,7 @@ resource "aws_lambda_function" "my_lambda" {
     }
   }
 
-  source_code_hash = filebase64sha256("${path.module}/${var.filename}")
+  source_code_hash = filebase64sha256(var.filename)
 }
 
 
