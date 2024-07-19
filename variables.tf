@@ -33,6 +33,11 @@ variable email2{
     default = "menedipavankumar0445@gmail.com"
 }
 
+variable filename{
+    type = string
+    default = "lambda/lambda.zip"
+}
+
 variable function_name{
     type = string
     default = "Email_Notification_Task"

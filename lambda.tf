@@ -1,5 +1,5 @@
 resource "aws_lambda_function" "my_lambda" {
-  filename      = "${path.module}/lambda/lambda.zip"
+  filename      = "${path.module}/${var.filename}"
   function_name = var.function_name
   role          = aws_iam_role.iam_for_lambda.arn
   handler       = var.handler
@@ -12,7 +12,7 @@ resource "aws_lambda_function" "my_lambda" {
     }
   }
 
-  source_code_hash = filebase64sha256("${path.module}/lambda/lambda.zip")
+  source_code_hash = filebase64sha256("${path.module}/${var.filename}")
 }
 
 
